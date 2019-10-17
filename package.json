@@ -1,0 +1,43 @@
+{
+  "name": "data-int-backend",
+  "version": "1.0.0",
+  "description": "backend microservice api",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "istanbul cover --include-all-sources test/test.js && istanbul check-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menty44/di-backend.git"
+  },
+  "author": "fredrick oluoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/menty44/di-backend/issues"
+  },
+  "homepage": "https://github.com/menty44/di-backend#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.2",
+    "express": "^4.16.4",
+    "jsonpatch": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "localstorage": "^1.0.1",
+    "lokijs": "^1.5.6",
+    "minimist": "*",
+    "mongoose": "^5.4.22",
+    "morgan": "^1.9.1",
+    "swagger-node-express": "^2.1.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "eslint": "^5.16.0",
+    "jsdoc": "^3.5.5",
+    "mocha": "^6.1.1",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.3.0"
+  }
+}
