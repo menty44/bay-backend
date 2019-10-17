@@ -66,8 +66,16 @@ module.exports = {
         res.json(patchedDoc);
     },
 
-    generate: function() {
+    generate: async function(req, res, next) {
+        let options = { width: 50, height: 50}
 
+        try {
+            const thumbnail = await imageThumbnail({ uri: 'http://blaqueyard.com/bc2.jpg'}, options)
+            console.log(thumbnail);
+            res.json(thumbnail);
+        } catch (err) {
+            console.error(err);
+        }
     }
 
 };
