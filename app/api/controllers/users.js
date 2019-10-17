@@ -70,14 +70,13 @@ module.exports = {
     },
 
     generate: function (req, res, next) {
+
         let path = '/Users/admin/Desktop/di-backend/thumbnail/final.jpg';
 
         Jimp.read('http://blaqueyard.com/bc2.jpg')
             .then(image => {
                 // Do stuff with the image.
-                console.log('image ', image)
                 image.resize(50, 50);
-                console.log('image2 ', image)
                 image.write(path);
                 res.json({status: 'success', message: 'image converted successfully'});
             })

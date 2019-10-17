@@ -16,6 +16,7 @@ const expect = chai.expect;
 let db = new loki('db.json');
 chai.use(chaiHttp);
 
+let tokens = '';
 //function to generate random usernames
 function generateuserName(length) {
     let name = '';
@@ -30,6 +31,7 @@ function generateuserName(length) {
 //check if the server is up
 testCase('GET', ()=> {
     it('it should check the server if its running', function(done) {
+        this.timeout(15000) // 10 second timeout only for this test
         chai.request('http://localhost:3000')
             .get('/')
             .end((err, res)=> {
@@ -66,13 +68,35 @@ testCase('POST', ()=> {
     it('get jwt token for future private api requests', (done)=> {
         chai.request('http://localhost:3000')
             .post('/users/authenticate')
-            .send({ username: 'menty', password: 'menty44' })
+            .send({ username: 'menty44', password: 'menty44' })
             .then(function (res) {
                 //in-memory data store
                 let children = db.addCollection('auth');
                 children.insert({token: res.body.data.token});
+                tokens = res.body.data.token;
                 // console.log('fetch token', children.get(1));
                 expect(res).to.have.status(200);
+                done();
+            })
+            .catch(function (err) {
+                throw err;
+            });
+    })
+});
+
+//do patching api using the generated token
+testCase('POST', ()=> {
+    it('it should return updated json using patch library', (done)=> {
+        //in-memory data fetch
+        let children = db.addCollection('auth');
+        let auth = children.get(1);
+        chai.request('http://localhost:3000')
+            .post('/api/patch')
+            .set('x-access-token', auth.token)
+            .send({ title: 'menty', message: 'menty44' })
+            .then(function (res) {
+                expect(res).to.have.status(200);
+                res.body.should.be.a('object');
                 done();
             })
             .catch(function (err) {
@@ -89,35 +113,36 @@ testCase('GET', ()=> {
         let auth = children.get(1);
         chai.request('http://localhost:3000')
             .get('/api/profiles')
-            .set('Authorization', auth.token)
-            .end((err, res)=> {
-                // console.log(res.body);
-                res.should.have.status(200);
-                res.body.should.be.a('array');
-                done();
-            });
-    })
-    });
-
-//do patching api using the generated token
-testCase('POST', ()=> {
-    it('it should return updated json using patch library', (done)=> {
-        //in-memory data fetch
-        let children = db.addCollection('auth');
-        let auth = children.get(1);
-        chai.request('http://localhost:3000')
-            .post('/api/patch')
-            .set('Authorization', auth.token)
-            .send({ title: 'menty', message: 'menty44' })
+            .set('x-access-token', tokens)
             .then(function (res) {
-                expect(res).to.have.status(200);
-                res.body.should.be.a('object');
+                res.should.have.status(200);
+                res.should.be.json;
+                res.body.should.be.a('array');
+                res.body[0].should.have.property('_id');
                 done();
-            })
-            .catch(function (err) {
-                throw err;
             });
     })
+});
+
+//do return success upon resizing the image to 50 by 50 dimension
+testCase('POST', ()=> {
+    it('it should return success upon resizing the image to 50 by 50 dimension', (done)=> {
+            //in-memory data fetch
+            let children = db.addCollection('auth');
+            let auth = children.get(1);
+             chai.request('http://localhost:3000')
+                 .get('/api/thumbnail')
+                 .set('x-access-token', auth.token)
+                 .then(function (res) {
+                     expect(res).to.have.status(200);
+                     res.body.should.be.a('object');
+                     done();
+                 })
+                 .catch(function (err) {
+                     throw err;
+                 });
+
+    });
 });
 
 

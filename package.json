@@ -4,7 +4,7 @@
   "description": "backend microservice api",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --timeout 10000",
     "test-cover": "istanbul cover --include-all-sources test/test.js && istanbul check-coverage"
   },
   "repository": {
