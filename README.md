@@ -18,7 +18,10 @@
     npm tests
 
 ###  Linting made with eslint
-    eslint filename i.e eslint test.js
+    npm run pretest
+    
+### Fix any linting error found
+    npm run pretest -- --fix    
 
 ### Logging made with chalk package 
     i.e log(chalk.blue('Server is running'));
