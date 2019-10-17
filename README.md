@@ -44,18 +44,19 @@
 ### Private endpoints
     GET http://localhost:3000/api/profiles
     POST http://localhost:3000/api/patch -data { title: "menty", message: "menty44" }
+    GET http://localhost:3000/api/thumbnail
 
 ### Dockerhub url for the dockerized application
-    https://cloud.docker.com/repository/docker/menty44/node_api  
+    https://cloud.docker.com/repository/docker/menty44/hackerbay 
       
 ### Pull the container from the hub
-    docker pull menty44/node_api
+    docker pull menty44/hackerbay
     
 ### Check the images to see if cloning was successful
     docker images
     
 ### Run the docker image
-    docker run -p 49160:8080 -d menty44/node_api i.e it should be running on http://localhost:8080 
+    docker run -p 49160:8080 -d menty44/hackerbay i.e it should be running on http://localhost:8080 
     
 ### If you need to go inside the container you can use the exec command
     docker exec -it <container id> /bin/bash i.e the app should be under this path /usr/src/app

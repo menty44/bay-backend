@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/menty44/di-backend.git"
+    "url": "git+https://github.com/menty44/bay-backend.git"
   },
   "author": "fredrick oluoch",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/menty44/di-backend/issues"
+    "url": "https://github.com/menty44/bay-backend/issues"
   },
-  "homepage": "https://github.com/menty44/di-backend#readme",
+  "homepage": "https://github.com/menty44/bay-backend#readme",
   "dependencies": {
     "base64-to-image": "^1.0.2",
     "bcrypt": "^3.0.5",
