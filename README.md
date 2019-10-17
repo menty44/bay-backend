@@ -22,6 +22,9 @@
     
 ### Fix any linting error found
     npm run pretest -- --fix    
+    
+### Run Instanbul
+    istanbul cover test/test.js
 
 ### Logging made with chalk package 
     i.e log(chalk.blue('Server is running'));
