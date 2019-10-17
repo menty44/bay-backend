@@ -1,3 +1,191 @@
+GET http://localhost:3000/api/thumbnail
+Accept: application/json
+Cache-Control: no-cache
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI
+
+###
+
+GET http://localhost:3000/api/thumbnail
+Accept: application/json
+Cache-Control: no-cache
+x-access-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI"
+
+<> 2019-10-17T040431.200.json
+
+###
+
+GET http://localhost:3000/users/patch
+Accept: application/json
+Cache-Control: no-cache
+x-access-token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI"
+
+<> 2019-10-17T040412.404.json
+
+###
+
+GET http://localhost:3000/users/patch
+Accept: application/json
+Cache-Control: no-cache
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI
+
+<> 2019-10-17T040350.404.json
+
+###
+
+GET http://{{host}}:3000/users/patch
+Accept: application/json
+Cache-Control: no-cache
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI
+
+###
+
+POST http://localhost:3000/users/authenticate
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+	"username":"menty44",
+	"password":"menty44"
+}
+
+<> 2019-10-17T040121.200.json
+
+###
+
+POST http://localhost:3000/users/authenticate
+Accept: application/json
+Cache-Control: no-cache
+
+{
+	"username":"menty44",
+	"password":"menty44"
+}
+
+<> 2019-10-17T035920.200.json
+
+###
+
+POST http://localhost:3000/users/authenticate
+Accept: application/json
+Cache-Control: no-cache
+{:
+	"username": "menty44",
+	"password": "menty44"
+}:
+
+###
+
+POST http://localhost:3000/users/authenticate
+Accept: application/json
+Cache-Control: no-cache
+
+{
+	"username":"menty44",
+	"password":"menty44"
+}
+
+<> 2019-10-17T035818.200.json
+
+###
+
+POST http://localhost:3000/users/authenticate
+Accept: application/json
+Cache-Control: no-cache
+
+{
+	"username":"menty44",
+	"password":"menty44"
+}
+
+<> 2019-10-17T035807.200.json
+
+###
+
+POST http://localhost:3000/users/login?=
+Accept: application/json
+Cache-Control: no-cache
+
+{ 	"username":"menty44", 	"password":"menty44" }
+
+<> 2019-10-17T035745-1.404.json
+
+###
+
+POST http://localhost:3000/users/login?=
+Accept: application/json
+Cache-Control: no-cache
+
+{ 	"username":"menty44", 	"password":"menty44" }
+
+<> 2019-10-17T035745.404.json
+
+###
+
+POST http://localhost:3000/users/login?username=menty&password=menty44
+Accept: application/json
+Cache-Control: no-cache
+
+{ 	"username":"menty44", 	"password":"menty44" }
+
+<> 2019-10-17T035706.404.json
+
+###
+
+POST http://localhost:3000/users/login?username=menty&password=menty44
+Accept: application/json
+Cache-Control: no-cache
+
+{ 	"username":"menty44", 	"password":"menty44" }
+
+<> 2019-10-17T035643.404.json
+
+###
+
+POST http://localhost:3000/users/login
+Accept: application/json
+Cache-Control: no-cache
+{:
+	"username": "menty44",
+	"password": "menty44"
+}:
+
+###
+
+POST http://localhost:3000/users/login
+Accept: application/json
+Cache-Control: no-cache
+
+{
+	"username":"menty44",
+	"password":"menty44"
+}
+
+<> 2019-10-17T035542.404.json
+
+###
+
+POST http://localhost:3000/users/login
+Accept: application/json
+Cache-Control: no-cache
+
+{
+"username":"menty44",
+"password":"menty44"
+}
+
+<> 2019-10-17T035513.404.json
+
+###
+
+POST http://localhost:3000/users/login?username=menty&password=menty44
+Accept: application/json
+Cache-Control: no-cache
+
+<> 2019-10-17T035411.404.json
+
+###
+
 POST http://localhost:3000/users/register?username=menty&password=menty44
 Accept: application/json
 Cache-Control: no-cache
