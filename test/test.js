@@ -137,13 +137,19 @@ testCase('POST', ()=> {
                      expect(res).to.have.status(200);
                      res.body.should.be.a('object');
                      done();
+                     log();
+                     log(chalk.blue('End of tests'));
                  })
                  .catch(function (err) {
                      throw err;
                  });
 
+
+
     });
+
 });
+
 
 
 

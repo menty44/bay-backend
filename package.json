@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --timeout 10000",
+    "pretest": "eslint --ignore-path .gitignore .",
     "test-cover": "istanbul cover --include-all-sources test/test.js && istanbul check-coverage"
   },
   "repository": {
@@ -39,7 +40,8 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.5.1",
+    "eslint-config-strongloop": "^2.1.0",
     "jsdoc": "^3.5.5",
     "mocha": "^6.1.1",
     "nodemon": "^1.18.10",

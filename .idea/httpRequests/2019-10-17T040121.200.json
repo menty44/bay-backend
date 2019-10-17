@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "message": "user found!!!",
+  "data": {
+    "user": {
+      "_id": "5da845af5bec7706facd3e66",
+      "username": "menty44",
+      "password": "$2b$10$JwGWJk0vtq4vomPtpJsgJ.MX4wKeVlVPi8Gbqj5TO2NIS/9WCe2p6",
+      "__v": 0
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTg0NWFmNWJlYzc3MDZmYWNkM2U2NiIsImlhdCI6MTU3MTMxNzI4MSwiZXhwIjoxNTcxMzIwODgxfQ.Fwd3z273y0WFCdrE2_6sQ_NLQCkL_semXx0tO89w8HI"
+  }
+}
