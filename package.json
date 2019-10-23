@@ -31,7 +31,7 @@
     "localstorage": "^1.0.1",
     "lokijs": "^1.5.6",
     "minimist": "*",
-    "mongoose": "^5.4.22",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "node-thumbnail": "^0.15.0",
     "prettier": "^1.18.2",
