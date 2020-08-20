@@ -20,7 +20,7 @@
   "homepage": "https://github.com/menty44/bay-backend#readme",
   "dependencies": {
     "base64-to-image": "^1.0.2",
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "chalk": "^2.4.2",
     "express": "^4.16.4",
