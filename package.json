@@ -21,9 +21,9 @@
   "dependencies": {
     "base64-to-image": "^1.0.2",
     "bcrypt": "^3.0.5",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "chalk": "^2.4.2",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "image-thumbnail": "^1.0.4",
     "jimp": "^0.8.4",
     "jsonpatch": "^3.0.1",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
+    "chai-http": "^4.3.0",
     "eslint": "^6.5.1",
     "eslint-config-strongloop": "^2.1.0",
     "jsdoc": "^3.5.5",
